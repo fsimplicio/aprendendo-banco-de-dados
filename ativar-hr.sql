@@ -1,0 +1,31 @@
+-- Conectado a base de dados SYSTEM Execute cada comando por vez.
+--1
+
+SHOW CON_NAME;
+
+--2
+
+SELECT name, con_id
+FROM v$pdbs; 
+
+--3
+
+ALTER SESSION SET CONTAINER=ORCLPDB
+
+--4 
+SHOW CON_NAME; 
+
+--5 
+
+SELECT NAME, OPEN_MODE FROM v$pdbs;
+
+--6
+
+ALTER PLUGGABLE DATABASE OPEN; 
+
+-- 7
+
+SELECT FROM ALL_USERS; 
+
+--8
+ALTER USER hr IDENTIFIED BY hr ACCOUNT UNLOCK;
